@@ -1,46 +1,95 @@
+/* Reset y configuración global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: monospace;
+  font-family: monospace, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+/* Contenedor central para centrar el contenido */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Estilos para los botones */
 .btn {
-    border-bottom: 2px solid;
-    background-color: rgba(50, 115, 220, 0.3);
-    position: relative;
-    z-index: 1; /* Eleva el botón por encima de otros elementos */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-bottom: 2px solid currentColor;
+  background-color: rgba(50, 115, 220, 0.3);
+  position: relative;
+  z-index: 1; /* Eleva el botón por encima de otros elementos */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#container1{
-    background-color: rgb(162, 142, 164);
-    position: relative;
-    border-color: black;
-    
-    border-radius: 2%;
-    padding: 2%;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    background-position: center center;
-
-
+.btn:hover {
+  background-color: rgba(50, 115, 220, 0.5);
+  transform: translateY(-2px);
 }
 
+/* Contenedor #container1 */
+#container1 {
+  background-color: rgb(162, 142, 164);
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 2%;
+  margin: 2% auto;
+  background-position: center center;
+  max-width: 1000px;
+}
+
+/* Sección generador RFC */
 #generador-rfc {
-    border-radius: 20px;
-    border: 2px solid;
-    border-width: 1px;
-    background-position: center center;
-    position: relative;
-    margin-left: 20%;
-    margin-right: 20%;
-    
+  border-radius: 20px;
+  border: 1px solid #000;
+  background-position: center center;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 600px;
+  width: 90%;
 }
- h4 {
-    opacity: 30%;
 
- }
+/* Estilos para encabezados */
+h4 {
+  opacity: 0.3; /* 30% de opacidad */
+  margin: 0.5rem 0;
+}
 
- footer {
-    margin-top: 5%;
-    margin-bottom: 2%; 
- }
+/* Estilos para el pie de página */
+footer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Media queries para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  #generador-rfc {
+    margin: 1rem auto;
+    padding: 0.75rem;
+    width: 95%;
+  }
+
+  #container1 {
+    padding: 4%;
+  }
+
+  .btn {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
 
 
 
